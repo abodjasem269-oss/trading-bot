@@ -1,9 +1,10 @@
+import os
 import requests
 import time
 from groq import Groq
 
-TELEGRAM_TOKEN = "8904774489:AAH7ethN1bWR8KApZ-MBBuOwkhz3n7Wejss"
-GROQ_API_KEY = "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"
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
 client = Groq(api_key=GROQ_API_KEY)
 
